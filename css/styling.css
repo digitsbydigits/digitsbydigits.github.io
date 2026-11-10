@@ -34,6 +34,10 @@ body {
     padding-top: var(--header-h);
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 .video-background {
     position: fixed;
     top: calc(var(--header-h) + var(--video-gap));
