@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styling.css">
+  <script src="script.js" defer></script>
+  <title>digitsbydigits</title>
+</head>
+
+<body>
+  <div class="scroll-markers side-left" id="markersLeft" aria-hidden="true">
+    <div class="sm-track"></div>
+    <span class="sm-label" id="smTimecode">00:00:00:00</span>
+  </div>
+  <div class="scroll-markers side-right" id="markersRight" aria-hidden="true">
+    <div class="sm-track"></div>
+    <span class="sm-label" id="smSection">OPENING</span>
+  </div>
+
+  <div class="intro-overlay" id="introOverlay"></div>
+
+  <div class="video-background" id="videoContainer">
+    <div id="player"></div>
+    <div class="video-overlay"></div>
+    <canvas class="puzzle-canvas" id="puzzleCanvas"></canvas>
+  </div>
+
+  <div class="header-overlay">
+    <div class="header-mirror" id="headerMirror" aria-hidden="true">
+      <div class="header-mirror-inner"><div id="mirrorPlayer"></div></div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@digitsbydigits" target="_blank">YT</a>
+      <a href="https://www.instagram.com/@digitsbydigits" target="_blank">IG</a>
+      <a href="mailto:fxfb049@gmail.com" target="_blank">EMAIL</a>
+    </div>
+
+    <h1>digitsbydigits</h1>
+  </div>
+
+  <div class="menu-container">
+    <button class="menu-btn" aria-label="Toggle menu" onclick="this.classList.toggle('active'); document.getElementById('sideNav').classList.toggle('active');">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="sideNav" class="side-menu">
+    <div class="menu-grid-container">
+      <div class="menu-left-col">
+        <p class="menu-description">
+          IN PURSUIT OF <br>
+          <span class="gradient-text gradient-knowledge">KNOWLEDGE</span>, <br>
+          <span class="gradient-text gradient-creativity">CREATIVITY</span>, <br>
+          <span class="gradient-text gradient-design">DESIGN</span>.
+        </p>
+      </div>
+
+      <nav class="menu-right-col">
+        <div class="nav-item-wrapper">
+          <a href="#creative-media" class="nav-link">CREATIVE MEDIA</a>
+          <span class="nav-line"></span>
+        </div>
+        <div class="nav-item-wrapper">
+          <a href="#mobile-projects" class="nav-link">MOBILE PROJECTS</a>
+          <span class="nav-line"></span>
+        </div>
+        <div class="nav-item-wrapper">
+          <a href="#websites" class="nav-link">WEBSITES</a>
+          <span class="nav-line"></span>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <section class="video-section" id="home">
+    <div class="hero-intro" id="heroIntro">
+      <p class="hero-text"><span class="hero-hi">Hi, I’m Fahmi.</span><br> - an aspiring student in IT, creative UI/UX design, and mobile apps development.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="showcase" id="creative-media" style="--tint-a: #017190; --tint-b: #2d88f7;">
+      <h2 class="showcase-title">CREATIVE MEDIA</h2>
+      <div class="showcase-rows">
+        <div class="showcase-row video-row">
+          <div class="video-card">
+            <svg class="reel" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <defs>
+                <mask id="reelCut">
+                  <rect width="100" height="100" fill="#fff"/>
+                  <g fill="#000"><circle class="reel-hole" cx="75.98" cy="65.00" r="10.5"/><circle class="reel-hole" cx="50.00" cy="80.00" r="10.5"/><circle class="reel-hole" cx="24.02" cy="65.00" r="10.5"/><circle class="reel-hole" cx="24.02" cy="35.00" r="10.5"/><circle class="reel-hole" cx="50.00" cy="20.00" r="10.5"/><circle class="reel-hole" cx="75.98" cy="35.00" r="10.5"/><circle cx="50" cy="50" r="3.5"/></g>
+                </mask>
+              </defs>
+              <circle class="reel-flange" cx="50" cy="50" r="48" mask="url(#reelCut)"/>
+              <circle class="reel-edge" cx="50" cy="50" r="48"/>
+              <circle class="reel-rim" cx="50" cy="50" r="43"/>
+              <circle class="reel-hole-rim" cx="75.98" cy="65.00" r="10.5"/><circle class="reel-hole-rim" cx="50.00" cy="80.00" r="10.5"/><circle class="reel-hole-rim" cx="24.02" cy="65.00" r="10.5"/><circle class="reel-hole-rim" cx="24.02" cy="35.00" r="10.5"/><circle class="reel-hole-rim" cx="50.00" cy="20.00" r="10.5"/><circle class="reel-hole-rim" cx="75.98" cy="35.00" r="10.5"/>
+              <circle class="reel-hub" cx="50" cy="50" r="11"/>
+              <circle class="reel-axle" cx="50" cy="50" r="3.5"/>
+            </svg>
+            <div class="film-strip showcase-text">
+              <h3>Video Editing &amp; Motion Graphics</h3>
+              <p>Cuts, loops and motion pieces, collected in one playlist.</p>
+              <div class="app-links">
+                <a class="app-btn app-btn-primary" href="https://www.youtube.com/watch?v=NLHxTUYrq20&list=PLeX5PwJOGGyI" target="_blank" rel="noopener noreferrer">Watch the full playlist on YouTube</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-row poster-row">
+          <div class="showcase-text">
+            <h3>Posters and designs</h3>
+            <p>Posters, covers and visual experiments.</p>
+          </div>
+          <div class="poster-gallery">
+            <a class="poster-card" href="https://drive.google.com/file/d/1-XB6cAhnnby3RDQzKnkl1F2JzKDRCj6d/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Futsal poster on Google Drive">
+              <span class="poster-face" data-label="POSTER FUTSAL">
+                <img src="images/poster-futsal.png" alt="Futsal poster" loading="lazy" onerror="this.remove()">
+              </span>
+            </a>
+            <a class="poster-card" href="https://drive.google.com/file/d/1d8MxJSOORNjbiDfLyvLHa-RfXLQtOvQC/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open Dialog JPP poster on Google Drive">
+              <span class="poster-face" data-label="POSTER DIALOG JPP">
+                <img src="images/poster-dialogjpp.png" alt="Dialog JPP poster" loading="lazy" onerror="this.remove()">
+              </span>
+            </a>
+            <a class="poster-card" href="https://drive.google.com/file/d/1d31_C-7beFLk599-PxSJXSwNdLPrfBgX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Merdeka poster on Google Drive">
+              <span class="poster-face" data-label="POSTER MERDEKA">
+                <img src="images/poster-merdeka.png" alt="Merdeka poster" loading="lazy" onerror="this.remove()">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-cta">
+        <a class="app-btn app-btn-primary" href="https://drive.google.com/drive/folders/1-hW-sYbFrkeXZ0E1h2W6LldZtbSf-2Qc?usp=sharing" target="_blank" rel="noopener noreferrer">View all my works on Google Drive</a>
+      </div>
+    </section>
+
+    <section class="showcase" id="mobile-projects" style="--tint-a: #00753f; --tint-b: #00ff51;">
+      <h2 class="showcase-title">MOBILE PROJECTS</h2>
+      <div class="showcase-rows">
+        <div class="showcase-row app-row">
+          <div class="app-shots">
+            <figure class="shot"><img src="images/flazhtech-1.jpg" alt="FLAZHTECH screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/flazhtech-2.jpg" alt="FLAZHTECH screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/flazhtech-3.jpg" alt="FLAZHTECH screenshot 3" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+          <div class="showcase-text">
+            <div class="app-heading">
+              <span class="app-icon"><img src="images/flazhtech-icon.png" alt="FLAZHTECH icon" onerror="this.remove()"></span>
+              <h3>FLAZHTECH</h3>
+            </div>
+            <p>An informational quiz app designed to aid students in computer maintenance skills.</p>
+            <div class="app-links">
+              <a class="app-btn app-btn-primary" href="https://drive.google.com/file/d/1rimNdt3NkNf6MKzAWPZJnzz8cSm1Xr0S/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download app now (Android only)</a>
+              <a class="app-btn app-btn-ghost" href="https://www.virustotal.com/gui/file/3c895e2bc99a3b79e0c5e039f73ddebf369044d0c5fa766002257e5ad81acdba?nocache=1" target="_blank" rel="noopener noreferrer">VirusTotal verification</a>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-row app-row">
+          <div class="app-shots">
+            <figure class="shot"><img src="images/okeyluas-1.jpg" alt="OkeyLuas screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/okeyluas-2.jpg" alt="OkeyLuas screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/okeyluas-3.jpg" alt="OkeyLuas screenshot 3" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+          <div class="showcase-text">
+            <div class="app-heading">
+              <span class="app-icon"><img src="images/okeyluas-icon.png" alt="OkeyLuas icon" onerror="this.remove()"></span>
+              <h3>OkeyLuas</h3>
+            </div>
+            <p>An app to help students learn and solve area of basic shapes.</p>
+            <div class="app-links">
+              <a class="app-btn app-btn-primary" href="https://drive.google.com/file/d/1SPb3TUqfHfbTTQQUEwYSFbn8gOPdhB3z/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download app now (Android only)</a>
+              <a class="app-btn app-btn-ghost" href="https://www.virustotal.com/gui/file/f39e85565cb7224369dcc8e13a2c18743500eac5e9c456fc8a9db17df1326687?nocache=1" target="_blank" rel="noopener noreferrer">VirusTotal verification</a>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-row app-row">
+          <div class="app-shots">
+            <figure class="shot"><img src="images/beemai-1.jpg" alt="beeMai screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/beemai-2.jpg" alt="beeMai screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot"><img src="images/beemai-3.jpg" alt="beeMai screenshot 3" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+          <div class="showcase-text">
+            <div class="app-heading">
+              <span class="app-icon"><img src="images/beemai-icon.png" alt="beeMai icon" onerror="this.remove()"></span>
+              <h3>beeMai</h3>
+            </div>
+            <p>An app to assist in tracking your Body Mass Index (BMI) with a click of a button.</p>
+            <div class="app-links">
+              <a class="app-btn app-btn-primary" href="https://drive.google.com/file/d/1JwFJNqDbmp9XK4nKUQCxLXLD9VG924Im/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download app now (Android only)</a>
+              <a class="app-btn app-btn-ghost" href="https://www.virustotal.com/gui/file/1f9b4c276fb80239e215ffab4f424660e327bb104600da62debc80f36d38976c?nocache=1" target="_blank" rel="noopener noreferrer">VirusTotal verification</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="websites" style="--tint-a: #2e8cff; --tint-b: #9400fe;">
+      <h2 class="showcase-title">WEBSITES</h2>
+      <div class="showcase-rows">
+        <div class="showcase-row">
+          <figure class="mascot"><img src="images/wayangfm-icon.png" alt="wayang.fm mascot: a smiling popcorn box in red-blue 3D glasses" onerror="this.remove()"></figure>
+          <div class="showcase-text popcorn-card">
+            <span class="kernel" aria-hidden="true" style="--left:10%;--x:-5.5rem;--y:-4.2rem;--r:-220deg;--d:0s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:24%;--x:-3.4rem;--y:-5.8rem;--r:160deg;--d:0.04s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:38%;--x:-1.4rem;--y:-7rem;--r:-140deg;--d:0.02s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:48%;--x:0.2rem;--y:-5.2rem;--r:240deg;--d:0.07s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:60%;--x:1.8rem;--y:-6.6rem;--r:-260deg;--d:0.03s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:72%;--x:3.6rem;--y:-4.8rem;--r:180deg;--d:0.05s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:86%;--x:5.6rem;--y:-3.8rem;--r:-120deg;--d:0.01s"></span>
+            <span class="kernel" aria-hidden="true" style="--left:54%;--x:-0.8rem;--y:-7.8rem;--r:300deg;--d:0.06s"></span>
+            <h3>wayang.fm</h3>
+            <p>A site designed to join users around the world into shared rooms where all of them can watch and enjoy popcorn together at once.</p>
+            <a class="repo-link" href="https://github.com/digitsbydigits/wayang_fm" target="_blank" rel="noopener noreferrer">github.com/digitsbydigits/wayang_fm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2 class="footer-brand">digitsbydigits.github.io</h2>
+    <p class="footer-contact">Contact me at <a href="mailto:fxfb049@gmail.com">fxfb049@gmail.com</a></p>
+  </footer>
+</body>
+</html>
